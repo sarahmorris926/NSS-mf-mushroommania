@@ -4,33 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is That Mushroom Safe?!</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-  <!-- angularjs -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
-  <!-- route -->
-  <title>Document</title>
 </head>
 
 <body ng-app="mushroomStuff">
 
   <div ng-controller="MushroomCtrl">
-
-    <h1>Mushroom Stuff</h1>
-
-    <input type="text" placeholder="search mushrooms">
-    <input type="radio">Poisonous
-    <input type="radio">Non-Poisonous
-
-    <div ng-view></div>
-
-  </div><!-- /MainCtrl -->
-
+    <input type="text" placeholder="search mushrooms" ng-model="mushroomName">
+    <input type="radio" ng-click="showPoisonous()">Poisonous
+    <input type="radio" ng-click="showNonpoisonous()">Non-poisonous
+    <ul ng-repeat="mushroom in mushroomList | filter: mushroomName">
+      <li>
+        <h2>{{mushroom.name}}</h2>
+        <p>{{mushroom.description}}</p>
+      </li>
+    </ul>
+  </div> <!-- /MainCtrl -->
 
   <script src="app.js"></script>
-  <!-- factories -->
-
-  <!-- controllers -->
-  <script src="MushroomCtrl.js"></script>
 </body>
 
 </html>
