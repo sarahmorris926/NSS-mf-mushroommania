@@ -1,4 +1,6 @@
 
+Note: This includes Mushroom Mania and Mushroom Factory from the Modern-Frameworks exercises.
+
 ## Setup
 
 Move into a directory that you'd like to clone down the code. Once you've moved into the correct directory, type the following command in the terminal:
@@ -9,7 +11,7 @@ git clone https://github.com/sarahmorris926/NSS-mf-mushroommania.git
 
 Once it's cloned down, start up a server and you're ready to view it on your local host.
 
-## Requirements
+## Requirements for Mushroom Mania
 
 For this exercise, I created a basic application, with a single view. My job was to load the JSON data below and display it in a list. Above the list, I provided one text box, and two radio buttons.
 
@@ -20,6 +22,15 @@ When the user types **any** text into the text box, the list of mushrooms should
 When the user clicks either of the radio buttons, only the appropriate mushrooms should be displayed.
 
 Use of firebase as an external database was a stretch goal.
+
+## Requirements for Mushroom Factory
+
+You are going to modify your Mushroom Mania application to use a factory to retrieve the mushroom data instead of retrieving it directly in your controller.
+
+1. Create a new factory for your Angular application. Make sure your factory returns something.
+1. Inject the factory dependency into your controller.
+1. Invoke the appropriate function that your factory exposes to get the mushroom data.
+1. When the method is successful, take the results and put them into `$scope.mushrooms` variable in your controller that is bound to the partial.
 
 ### Data
 
