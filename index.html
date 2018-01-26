@@ -6,15 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Is That Mushroom Safe?!</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
 </head>
 
-<body ng-app="mushroomStuff">
+<body ng-app="MushroomStuff">
 
   <div ng-controller="MushroomCtrl">
     <input type="text" placeholder="search mushrooms" ng-model="mushroomName">
-    <input type="radio" ng-click="showPoisonous()">Poisonous
-    <input type="radio" ng-click="showNonpoisonous()">Non-poisonous
+    <input type="radio" name="mushroomType" ng-click="showPoisonous()">Poisonous
+    <input type="radio" name="mushroomType" ng-click="showNonpoisonous()">Non-poisonous
     <ul ng-repeat="mushroom in mushroomList | filter: mushroomName">
       <li>
         <h3>{{mushroom.name}}</h3>
@@ -24,6 +23,8 @@
   </div> <!-- /MainCtrl -->
 
   <script src="app.js"></script>
+  <script src="MushroomCtrl.js"></script>
+  <script src="MushroomFactory.js"></script>
 </body>
 
 </html>
