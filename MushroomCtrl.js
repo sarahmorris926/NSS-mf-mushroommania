@@ -12,8 +12,8 @@ angular
 
     const convertToArray = mushroomData => {
       const mushroomArr = [];
-      for (let currentMushroom in mushroomData.data.mushrooms) {
-        mushroomArr.push(mushroomData.data.mushrooms[currentMushroom]);
+      for (let currentMushroom in mushroomData.data) {
+        mushroomArr.push(mushroomData.data[currentMushroom]);
       }
       return mushroomArr;
     };
@@ -43,3 +43,5 @@ angular
       });
     };
   });
+
+  

@@ -15,4 +15,6 @@ angular.module("MushroomStuff").factory("MushroomFactory", function($q, $http) {
   };
 
   return { getMushrooms };
+  
+  
 });
