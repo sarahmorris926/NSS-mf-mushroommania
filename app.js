@@ -8,13 +8,14 @@ app.controller('MushroomCtrl', function($scope, $q, $http) {
   };
   let getMushrooms = () => {
     return $q( (resolve, reject) => {
-      $http.get(mushrooms.json)
-      .then((mushrooms) => {
-        resolve(mushrooms);
-      })
-      .catch((err) => {
-        reject(err);
-      });
+      $http
+        .get("mushrooms.json")
+        .then((mushrooms) => {
+          resolve(mushrooms);
+        })
+        .catch((err) => {
+          reject(err);
+        });
     });
   };
 
