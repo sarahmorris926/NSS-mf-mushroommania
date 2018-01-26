@@ -3,7 +3,7 @@ Note: This includes Mushroom Mania and Mushroom Factory from the Modern-Framewor
 
 ## Setup
 
-Move into a directory that you'd like to clone down the code. Once you've moved into the correct directory, type the following command in the terminal:
+Move into a directory where you'd like to clone down the code. Once you've moved into the correct directory, type the following command in the terminal:
 
 ```
 git clone https://github.com/sarahmorris926/NSS-mf-mushroommania.git
